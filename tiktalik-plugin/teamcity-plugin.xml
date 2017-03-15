@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teamcity-plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:schemas-jetbrains-com:teamcity-plugin-v1-xml">
+    <info>
+        <name>tiktalik-plugin</name>
+        <display-name>Tiktalik Support</display-name>
+        <version>@Version@</version>
+        <description>Support for build agents running on Tiktalik Cloud</description>
+        <download-url>https://github.com/pelotasplus/teamcity-tiktalik-plugin</download-url>
+        <email>pelotasplus@gmail.com</email>
+        <vendor>
+            <name>Aleksander Piotrowski</name>
+            <url>https://about.me/pelotasplus</url>
+            <logo>https://pbs.twimg.com/profile_images/435090180832108544/X_6i9d6g_400x400.jpeg</logo>
+        </vendor>
+    </info>
+    <deployment use-separate-classloader="true"/>
+</teamcity-plugin>
