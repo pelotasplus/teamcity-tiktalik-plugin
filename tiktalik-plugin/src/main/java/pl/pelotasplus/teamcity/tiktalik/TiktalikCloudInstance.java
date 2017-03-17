@@ -75,10 +75,12 @@ public class TiktalikCloudInstance implements CloudInstance {
     @Nullable
     @Override
     public String getNetworkIdentity() {
-        if (instance != null) {
-            return "0.0.0.0";
+        if (instance == null) {
+            return null;
+        } else if (instance.getInterfaces().size() > 0) {
+            return instance.getInterfaces().get(0).getIp();
         } else {
-            return "some IP";
+            return null;
         }
     }
 
