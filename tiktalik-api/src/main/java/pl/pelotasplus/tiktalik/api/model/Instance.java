@@ -2,6 +2,9 @@ package pl.pelotasplus.tiktalik.api.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Instance {
     @SerializedName("actions_pending_count")
     private int actionsPendingCount;
@@ -9,7 +12,8 @@ public class Instance {
     @SerializedName("service_name")
     private String serviceName;
 
-    // interfaces
+    @SerializedName("interfaces")
+    private List<Interface> interfaces = new ArrayList<>();
 
     // actions
 
@@ -54,28 +58,11 @@ public class Instance {
         return state;
     }
 
+    public List<Interface> getInterfaces() {
+        return interfaces;
+    }
+
     /*
-    {
-    "interfaces": [
-      {
-        "mac": "e6:59:17:f5:75:0b",
-        "vps": "7ced6c63-db80-456c-a088-dd75e91d8688",
-        "uuid": "6aabe832-3cf9-4949-ba25-f0cd6a7a4214",
-        "seq": 0,
-        "ip": "37.233.99.102",
-        "floating": false,
-        "revdns": null,
-        "network": {
-          "full": false,
-          "uuid": "212c7fd1-6018-41ff-9a01-a37956517237",
-          "domainname": "p3.tiktalik.io",
-          "owner": "system",
-          "net": "37.233.99.0/24",
-          "public": true,
-          "name": "pub3"
-        }
-      }
-    ],
     "actions": [
       {
         "code": 3,
