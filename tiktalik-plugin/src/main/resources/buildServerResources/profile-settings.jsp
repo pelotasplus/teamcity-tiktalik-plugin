@@ -49,7 +49,13 @@
     <td>
         <props:selectProperty name="${instance_size}" className="longField">
         <props:option value="1s">
-            <c:out value="1 GB - 1CPU - 20Gb - 10 PLN/mo"/>
+            <c:out value="1 Unit STD - 1 GB RAM - 1 CPU - 20 GB HDD - 10 PLN/mo"/>
+        </props:option>
+        <props:option value="0.25">
+            <c:out value="0.25 Unit PRO - 0.25 GB RAM - 0.25 GHz CPU - 2.5 GB SSD - 23.91 PLN/mo"/>
+        </props:option>
+        <props:option value="2">
+            <c:out value="2 Unit PRO - 2 GB RAM - 2 GHz CPU - 20 GB SSD - ?? PLN/mo"/>
         </props:option>
         </props:selectProperty>
 </tr>
