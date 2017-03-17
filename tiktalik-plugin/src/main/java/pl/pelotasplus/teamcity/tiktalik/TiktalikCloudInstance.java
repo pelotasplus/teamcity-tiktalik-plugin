@@ -41,20 +41,16 @@ public class TiktalikCloudInstance implements CloudInstance {
     @NotNull
     @Override
     public String getInstanceId() {
-        if (instance == null) {
-            return "TK-not-started-yet";
-        } else {
-            return "TK-" + instance.getUuid();
-        }
+        return String.format("%s-%d", Constants.CLOUD_CODE, startTime.getTime());
     }
 
     @NotNull
     @Override
     public String getName() {
         if (instance == null) {
-            return "TK-not-started-yet";
+            return String.format("ID: %s IP: not-started-yet", getInstanceId());
         } else {
-            return "TK-" + instance.getHostname();
+            return String.format("ID: %s IP: %s", getInstanceId(), getNetworkIdentity());
         }
     }
 
